@@ -3,10 +3,10 @@ package org.firstinspires.ftc.teamcode.DutchFTCCore;
 public class Robotconfig {
 
     //drivetrain motors
-    public static String MotorBackLeft = "MotorBackLeft";
-    public static String MotorFrontLeft = "MotorFrontLeft";
-    public static String MotorFrontRight = "MotorFrontRight";
-    public static String MotorBackRight = "MotorBackRight";
+    public static String MotorBackLeft = "left_back";
+    public static String MotorFrontLeft = "left_front";
+    public static String MotorFrontRight = "right_front";
+    public static String MotorBackRight = "right_back";
     public static String MotorMiddle = "MotorMiddle";
 
     //servo ports
