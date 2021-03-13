@@ -35,7 +35,7 @@ public class Robotcontrol {
     public void intake(Drivetrain m_Drivetrain, boolean intake){
         if (intake) {
             m_Drivetrain.intake_motor.setPower(1);
-            m_Drivetrain.intake2_motor.setPower(1);
+            m_Drivetrain.intake2_motor.setPower(0.45);
         } else{
             m_Drivetrain.intake_motor.setPower(0);
             m_Drivetrain.intake2_motor.setPower(0);
