@@ -50,4 +50,12 @@ public class Robotcontrol {
             m_Drivetrain.shooting_motor.setPower(0);
         }
     }
+
+    public void servo(Drivetrain m_Drivetrain, boolean servo){
+        if (servo) {
+            m_Drivetrain.arm_servo.setPosition();
+        } else{
+            m_Drivetrain.arm_servo.setDirection();
+        }
+     }
 }
