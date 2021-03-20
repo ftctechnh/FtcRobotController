@@ -4,10 +4,11 @@ import org.firstinspires.ftc.teamcode.Subsystems.Drivetrain;
 
 public class Robotcontrol {
 
-    public void mechanumdrive(Drivetrain m_drivetrain, double xDirection, double yDirection) { //Periodic
+    //Periodic
+    public void mechanumdrive(Drivetrain m_drivetrain, double xDirection, double yDirection) {
 
         double r = Math.hypot(xDirection,yDirection);
-        double robotAngle = Math.atan2(yDirection,xDirection) - Math.PI/4;
+        double robotAngle = Math.atan2(yDirection, xDirection) - (Math.PI / 4);
         double rightX = xDirection;
         final double LeftFront = r * Math.cos(robotAngle)-rightX;
         final double RightFront = r * Math.sin(robotAngle)+rightX;
