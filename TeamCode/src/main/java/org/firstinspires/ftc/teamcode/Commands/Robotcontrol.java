@@ -53,9 +53,9 @@ public class Robotcontrol {
 
     public void servo(Drivetrain m_Drivetrain, boolean servo){
         if (servo) {
-            m_Drivetrain.arm_servo.setPosition();
+            m_Drivetrain.arm_servo.setPosition(0);
         } else{
-            m_Drivetrain.arm_servo.setDirection();
+            m_Drivetrain.arm_servo.setPosition(0.5);
         }
      }
 }
