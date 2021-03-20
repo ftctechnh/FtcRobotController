@@ -34,4 +34,11 @@ public class DriverControlled extends OpMode {
 
 
     }
+    @Override
+    public boolean atRest() {
+
+
+
+
+    }
 }
