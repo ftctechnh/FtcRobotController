@@ -34,8 +34,6 @@ public class DriverControlled extends OpMode {
         if(gamepad1.right_bumper);{
             int arm_servo = 1;
 
-            else arm_servo = null;
-
         }
 
     }

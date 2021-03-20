@@ -41,9 +41,4 @@ public class Robotcontrol {
             m_Drivetrain.intake2_motor.setPower(0);
         }
     }
-    public void shooting(Drivetrain m_Drivetrain, boolean shooting){
-        if (shooting();)
-
-
-    }
 }
