@@ -3,6 +3,7 @@ package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
+import com.qualcomm.robotcore.hardware.Servo;
 
 import org.firstinspires.ftc.teamcode.DutchFTCCore.Robot;
 import org.firstinspires.ftc.teamcode.DutchFTCCore.SubSystems.MovementSubSystem;
@@ -30,8 +31,10 @@ public class DriverControlled extends OpMode {
         MovementSubSystem.rotation = gamepad1.right_trigger -gamepad1.left_trigger;
         bot.Update();
 
-        if(gamepad1.left_bumper);
+        if(gamepad1.right_bumper = 1);{
+            public Servo arm_servo = 1;
 
+        }
 
     }
 
