@@ -31,8 +31,10 @@ public class DriverControlled extends OpMode {
         MovementSubSystem.rotation = gamepad1.right_trigger -gamepad1.left_trigger;
         bot.Update();
 
-        if(gamepad1.right_bumper = 1);{
-            public Servo arm_servo = 1;
+        if(gamepad1.right_bumper);{
+            int arm_servo = 1;
+
+            else arm_servo = null;
 
         }
 
