@@ -32,10 +32,10 @@ public class Drivetrain {
 
 
 
-        left_front.setDirection(DcMotor.Direction.REVERSE);
-        left_back.setDirection(DcMotor.Direction.REVERSE);
-        right_front.setDirection(DcMotor.Direction.FORWARD);
-        right_back.setDirection(DcMotor.Direction.FORWARD);
+        left_front.setDirection(DcMotor.Direction.FORWARD);
+        left_back.setDirection(DcMotor.Direction.FORWARD);
+        right_front.setDirection(DcMotor.Direction.REVERSE);
+        right_back.setDirection(DcMotor.Direction.REVERSE);
 
         intake_motor.setDirection(DcMotorSimple.Direction.REVERSE);
         intake2_motor.setDirection(DcMotorSimple.Direction.REVERSE);
