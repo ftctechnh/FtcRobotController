@@ -5,6 +5,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.Servo;
+import com.qualcomm.robotcore.hardware.ServoController;
 
 public class Drivetrain {
 
@@ -25,22 +26,26 @@ public class Drivetrain {
         right_front = m_hardwaremap.get(DcMotor.class,"right_front");
         right_back = m_hardwaremap.get(DcMotor.class,"right_back");
 
-        intake_motor = m_hardwaremap.get(DcMotor.class, "intake_motor");
-        intake2_motor = m_hardwaremap.get(DcMotor.class, "intake2_motor");
-        shooting_motor = m_hardwaremap.get(DcMotor.class, "shooting_motor");
+        //intake_motor = m_hardwaremap.get(DcMotor.class, "intake_motor");
+        //intake2_motor = m_hardwaremap.get(DcMotor.class, "intake2_motor");
+        //shooting_motor = m_hardwaremap.get(DcMotor.class, "shooting_motor");
         arm_servo = m_hardwaremap.get(Servo.class, "arm_servo");
 
 
 
-        left_front.setDirection(DcMotor.Direction.REVERSE);
-        left_back.setDirection(DcMotor.Direction.REVERSE);
-        right_front.setDirection(DcMotor.Direction.FORWARD);
-        right_back.setDirection(DcMotor.Direction.FORWARD);
+        left_front.setDirection(DcMotor.Direction.FORWARD);
+        left_back.setDirection(DcMotor.Direction.FORWARD);
+        right_front.setDirection(DcMotor.Direction.REVERSE);
+        right_back.setDirection(DcMotor.Direction.REVERSE);
 
-        intake_motor.setDirection(DcMotorSimple.Direction.REVERSE);
-        intake2_motor.setDirection(DcMotorSimple.Direction.REVERSE);
-        shooting_motor.setDirection(DcMotorSimple.Direction.FORWARD);
-        arm_servo.setDirection(Servo.Direction.REVERSE);
+        //intake_motor.setDirection(DcMotorSimple.Direction.REVERSE);
+        //intake2_motor.setDirection(DcMotorSimple.Direction.REVERSE);
+        //shooting_motor.setDirection(DcMotorSimple.Direction.FORWARD);
+        ServoController sc = arm_servo.getController();
+        sc.pwmEnable();
+        arm_servo.setPosition(0.7);
+        //arm_servo.setDirection(Servo.Direction.REVERSE);
+
     }
 
 
