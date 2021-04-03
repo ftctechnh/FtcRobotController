@@ -51,12 +51,12 @@ public class Robotcontrol {
         }
     }
 
- //   public void servo(Drivetrain m_Drivetrain, float servo){
- //       if (servo){
- //           m_Drivetrain.arm_servo.setPosition(0.5);
- //       } else {
- //           m_Drivetrain.arm_servo.setPosition(0);
- //       }
- //   }
+    public void pushRing(Drivetrain m_Drivetrain, boolean bumper){
+        if (bumper){
+            m_Drivetrain.arm_servo.setPosition(0.5);
+        } else {
+            m_Drivetrain.arm_servo.setPosition(0);
+        }
+    }
 
 }

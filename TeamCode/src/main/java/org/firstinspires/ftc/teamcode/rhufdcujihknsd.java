@@ -1,8 +1,8 @@
-package org.firstinspires.ftc.teamcode.Commands;
+//package org.firstinspires.ftc.teamcode.Commands;
 
-import org.firstinspires.ftc.teamcode.Subsystems.Drivetrain;
+/*import org.firstinspires.ftc.teamcode.Subsystems.Drivetrain;
 
-public class Robotcontrol {
+public class Robotcontrol2 {
 
     //Periodic
     public void autonome(Drivetrain m_drivetrain) {
@@ -16,3 +16,4 @@ public class Robotcontrol {
 
 
     }
+*/
