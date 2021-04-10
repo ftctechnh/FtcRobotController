@@ -95,6 +95,7 @@ public class OPMode extends OpMode
 
         m_Robotcontrol.mechanumdrive(m_Drivetrain, gamepad1.left_stick_x, gamepad1.left_stick_y);
         m_Robotcontrol.intake(m_Drivetrain, gamepad1.a);
+        m_Robotcontrol.intakeOut(m_Drivetrain, gamepad1.x);
         m_Robotcontrol.shooting(m_Drivetrain, gamepad1.b);
         //m_Robotcontrol.pushRing(m_Drivetrain, gamepad1.right_bumper);
 

@@ -51,6 +51,14 @@ public class Robotcontrol {
         }
     }
 
+    public void intakeOut(Drivetrain m_Drivetrain, boolean intakeOut){
+        if (intakeOut) {
+            m_Drivetrain.intake_motor.setPower(-1);
+        } else{
+            m_Drivetrain.intake_motor.setPower(0);
+        }
+    }
+
    /* public void pushRing(Drivetrain m_Drivetrain, boolean bumper){
         if (bumper){
             m_Drivetrain.arm_servo.setPosition(0.5);
