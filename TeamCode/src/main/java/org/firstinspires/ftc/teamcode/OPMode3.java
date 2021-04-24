@@ -48,11 +48,10 @@ import com.qualcomm.robotcore.hardware.Servo;
  * Use Android Studio to Copy this Class, and Paste it into your team's code folder with a new name.
  * Remove or comment out the @Disabled line to add this opmode to the Driver Station OpMode list
  */
-@TeleOp(name = "Concept: Scan Servo", group = "Concept")
-@Disabled
-public class OPMode3 extends LinearOpMode {
+@TeleOp(name = "Concept: atonomous mode", group = "Concept")
+public class OPMode3 extends OPMode  {
 
-    static final double INCREMENT   = 0.01;     // amount to slew servo each CYCLE_MS cycle
+  /*  static final double INCREMENT   = 0.01;     // amount to slew servo each CYCLE_MS cycle
     static final int    CYCLE_MS    =   50;     // period of each cycle
     static final double MAX_POS     =  1.0;     // Maximum rotational position
     static final double MIN_POS     =  0.0;     // Minimum rotational position
@@ -112,5 +111,56 @@ public class OPMode3 extends LinearOpMode {
         // Signal done;
         telemetry.addData(">", "Done");
         telemetry.update();
+    }*/
+
+    @Override
+    public void init() {
+        telemetry.addData("Status", "Initialized");
+
+        m_Drivetrain.mechanum_hardware(hardwareMap);
+
+        // Tell the driver that initialization is complete.
+        telemetry.addData("Status", "Initialized");
+
+        m_Robotcontrol.mechanumdrive(m_Drivetrain, 1,1);
     }
+
+    /*
+     * Code to run REPEATEDLY after the driver hits INIT, but before they hit PLAY
+     */
+    @Override
+    public void init_loop() {
+    }
+
+    /*
+     * Code to run ONCE when the driver hits PLAY
+     */
+    @Override
+    public void start() {
+        runtime.reset();
+    }
+
+
+    /*
+     * Code to run REPEATEDLY after the driver hits PLAY but before they hit STOP
+     */
+    @Override
+    public void loop() {
+
+        m_Robotcontrol.mechanumdrive(m_Drivetrain, gamepad1.left_stick_x, gamepad1.left_stick_y);
+        m_Robotcontrol.intake(m_Drivetrain, gamepad1.a);
+        m_Robotcontrol.intakeOut(m_Drivetrain, gamepad1.x);
+        m_Robotcontrol.shooting(m_Drivetrain, gamepad1.b);
+        //m_Robotcontrol.pushRing(m_Drivetrain, gamepad1.right_bumper);
+
+        //  telemetry.addData("Status", "Run Time: " + runtime.toString());
+    }
+
+    /*
+     * Code to run ONCE after the driver hits STOP
+     */
+    @Override
+    public void stop() {
+    }
+
 }
