@@ -59,7 +59,7 @@ public class OPMode extends OpMode
     Robotcontrol m_Robotcontrol = new Robotcontrol();
 
 
-    /*
+    /*+
      * Code to run ONCE when the driver hits INIT
      */
     @Override
