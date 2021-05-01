@@ -158,7 +158,7 @@ public class AutonomousMode extends LinearOpMode {
             // to artificially zoom in to the center of image.  For best results, the "aspectRatio" argument
             // should be set to the value of the images used to create the TensorFlow Object Detection model
             // (typically 16/9).
-            tfod.setZoom(2.5, 16.0/9.0);
+            //tfod.setZoom(2.5, 16.0/9.0);
         }
 
         // WARNING:
@@ -210,14 +210,16 @@ public class AutonomousMode extends LinearOpMode {
             else {
                 telemetry.addData("Visible Target", "none");
             }
-            telemetry.update();
+
 
 
             //tfod object detection phase
             if (tfod != null) {
                 // getUpdatedRecognitions() will return null if no new information is available since
                 // the last time that call was made.
-                List<Recognition> updatedRecognitions = tfod.getUpdatedRecognitions();
+                //List<Recognition> updatedRecognitions = tfod.getUpdatedRecognitions();
+                // getRecognitions() returns all current recognitions
+                List<Recognition> updatedRecognitions = tfod.getRecognitions();
                 if (updatedRecognitions != null) {
                     telemetry.addData("# Object Detected", updatedRecognitions.size());
                     // step through the list of recognitions and display boundary info
@@ -229,9 +231,9 @@ public class AutonomousMode extends LinearOpMode {
                         telemetry.addData(String.format("  right,bottom (%d)", i), "%.03f , %.03f",
                                 recognition.getRight(), recognition.getBottom());
                     }
-                    telemetry.update();
                 }
             }
+            telemetry.update();
         }
 
         // Disable Tracking when we are done;

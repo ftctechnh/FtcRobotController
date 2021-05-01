@@ -137,7 +137,7 @@ public class OPMode3 extends OPMode  {
      */
     @Override
     public void start() {
-        runtime.reset();
+        //runtime.reset();
     }
 
 
