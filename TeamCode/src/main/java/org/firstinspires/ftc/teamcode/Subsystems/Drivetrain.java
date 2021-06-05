@@ -43,7 +43,7 @@ public class Drivetrain {
         intake_motor.setDirection(DcMotorSimple.Direction.REVERSE);
         intake2_motor.setDirection(DcMotorSimple.Direction.REVERSE);
         shooting_motor.setDirection(DcMotorSimple.Direction.FORWARD);
-        wobble_dropper.setDirection(DcMotorSimple.Direction.FORWARD);
+        wobble_dropper.setDirection(DcMotorSimple.Direction.REVERSE);
         //ServoController sc = arm_servo.getController();
         //sc.pwmEnable();
         //arm_servo.setPosition(0.7);
