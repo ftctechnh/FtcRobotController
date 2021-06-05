@@ -59,6 +59,15 @@ public class Robotcontrol {
         }
     }
 
+    public void wobbleGoal(Drivetrain m_Drivetrain, boolean wobbleGoal){
+        if (wobbleGoal) {
+            m_Drivetrain.wobble_dropper.setPower(0.05);
+        } else{
+            m_Drivetrain.wobble_dropper.setPower(0);
+        }
+    }
+
+
    /* public void pushRing(Drivetrain m_Drivetrain, boolean bumper){
         if (bumper){
             m_Drivetrain.arm_servo.setPosition(0.5);

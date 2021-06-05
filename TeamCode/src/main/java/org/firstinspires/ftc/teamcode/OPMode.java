@@ -97,6 +97,7 @@ public class OPMode extends OpMode
         m_Robotcontrol.intake(m_Drivetrain, gamepad1.a);
         m_Robotcontrol.intakeOut(m_Drivetrain, gamepad1.x);
         m_Robotcontrol.shooting(m_Drivetrain, gamepad1.b);
+        m_Robotcontrol.wobbleGoal(m_Drivetrain, gamepad1.y);
         //m_Robotcontrol.pushRing(m_Drivetrain, gamepad1.right_bumper);
 
         //  telemetry.addData("Status", "Run Time: " + runtime.toString());

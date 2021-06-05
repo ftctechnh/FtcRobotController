@@ -17,6 +17,7 @@ public class Drivetrain {
     public DcMotor intake_motor = null;
     public DcMotor intake2_motor = null;
     public DcMotor shooting_motor = null;
+    public DcMotor wobble_dropper = null;
     //public Servo arm_servo = null;
 
     public void mechanum_hardware (HardwareMap m_hardwaremap) { //init
@@ -29,6 +30,7 @@ public class Drivetrain {
         intake_motor = m_hardwaremap.get(DcMotor.class, "intake_motor");
         intake2_motor = m_hardwaremap.get(DcMotor.class, "intake2_motor");
         shooting_motor = m_hardwaremap.get(DcMotor.class, "shooting_motor");
+        wobble_dropper = m_hardwaremap.get(DcMotor.class, "wobble_dropper");
         //arm_servo = m_hardwaremap.get(Servo.class, "arm_servo");
 
 
@@ -41,6 +43,7 @@ public class Drivetrain {
         intake_motor.setDirection(DcMotorSimple.Direction.REVERSE);
         intake2_motor.setDirection(DcMotorSimple.Direction.REVERSE);
         shooting_motor.setDirection(DcMotorSimple.Direction.FORWARD);
+        wobble_dropper.setDirection(DcMotorSimple.Direction.FORWARD);
         //ServoController sc = arm_servo.getController();
         //sc.pwmEnable();
         //arm_servo.setPosition(0.7);
